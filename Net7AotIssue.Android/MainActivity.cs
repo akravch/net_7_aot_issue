@@ -11,4 +11,12 @@ namespace Net7AotIssue.Android
             SetContentView(Resource.Layout.activity_main);
         }
     }
+
+    public class ProblematicClass<T>
+    {
+        public Type ProblematicMethod(int i)
+        {
+            return i == 0 ? typeof(T) : null;
+        }
+    }
 }
